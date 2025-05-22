@@ -4,12 +4,8 @@
 #include <stdbool.h>
 
 typedef struct{
-    int tables;
-    int nails;
-    int ropes;
-    int tableCost;
-    int nailCost;
-    int ropeCost;
+    int price;
+    char[50] objectName;
 } Material;
 
 int main(){
@@ -27,7 +23,16 @@ int main(){
         printf("Oro: $%d\n", gold);
         printf("Opción: ");
         scanf("%d", &option);
+        int trap = 2 * tabla.price + 4 * clavo.price
+        Material tabla = { 50, "tabla" };
+        Material clavo = { 10, "tabla" };
+        Material soga = { 50, "tabla" };
 
+        if (coins > trap)
+{
+    
+
+}
         switch (option)
         {
         case 1 :
@@ -75,7 +80,9 @@ int main(){
         }
 
     }
-    showInventory:
+
+    void showInventory(){
+
         printf("**INVENTARIO**\n");
         printf("Tablas: x%d\n", material.tables);
         printf("Clavos: x%d\n", material.nails);
@@ -95,4 +102,5 @@ int main(){
             printf("Materiales insuficientes para fabricar una trampa.\n");
         }
         return 0;
+}
 }
